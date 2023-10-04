@@ -67,7 +67,7 @@ const Form = memo(({addProduct, Product, handle ,selected}) => {
           <select
             value={category}
             onChange={handle}
-            className="ml-1 outline-none font-semibold text-white rounded-md border border-black py-1 px-4 bg-transparent"
+            className="ml-1 outline-none text-black rounded-md border border-black py-1 px-4 bg-transparent"
             name="category"
             id="category"
           >
@@ -75,7 +75,7 @@ const Form = memo(({addProduct, Product, handle ,selected}) => {
               return (
                 <option
                   key={id}
-                  className="text-gray-700 font-medium"
+                  className="text-black font-medium"
                   value={el}
                 >
                   {el}
