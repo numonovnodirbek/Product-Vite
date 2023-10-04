@@ -1,5 +1,9 @@
-import React, { memo, useEffect } from "react";
+import { memo, useEffect } from "react";
 import "./table.scss";
+
+import edit from "../assets/edit.svg";
+import remove from "../assets/delete.svg";
+
 const Table = memo(({ Products, editProduct, deleteProduct }) => {
   useEffect(() => {
     let items = $(".row-card .nfl");
@@ -58,16 +62,19 @@ const Table = memo(({ Products, editProduct, deleteProduct }) => {
                     <li>{category}</li>
                     <li>{quantity}</li>
                     <li>
-                      <div className="flex gap-3 items-center">
-                        <div>
-                          <i
-                            className="fa fa-pencil-square text-emerald-400 text-[30px] cursor-pointer"
+                      <div className="flex gap-3 items-center" style={{transform:"translateY(5px)"}}>
+                          <img
+                            width={25}
+                            src={edit}
+                            alt=""
                             onClick={() => editProduct(id)}
-                          ></i>
-                        </div>
-                        <div onClick={() => deleteProduct(id)}>
-                          <i className="fa-solid fa-trash text-red-600 cursor-pointer text-[25px]"></i>
-                        </div>
+                          />
+                          <img
+                            width={25}
+                            src={remove}
+                            alt=""
+                            onClick={() => deleteProduct(id)}
+                          />
                       </div>
                     </li>
                   </ul>
