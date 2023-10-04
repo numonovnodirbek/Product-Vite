@@ -25,31 +25,31 @@ const LoginPage = ({setIsAuth}) => {
       >
         <h2 className="text-black text-3xl text-center">Login</h2>
         <div className="flex flex-col gap-2">
-          <label htmlFor="username" className="text-xl text-white">
+          <label htmlFor="username" className="text-xl">
             UserName
           </label>
           <input
             type="text"
             onChange={Handle}
             id="username"
-            placeholder="UserName"
+            placeholder="nodirbek"
             value={username}
             name="username"
-            className="outline-none py-2 rounded-md text-gray-700 px-5 text-xl"
+            className="outline-none py-2 rounded-md border text-gray-700 px-5 text-xl"
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="password" className="text-xl text-white">
+          <label htmlFor="password" className="text-xl">
             Password
           </label>
           <input
             type="password"
             onChange={Handle}
             id="password"
-            placeholder="Password"
+            placeholder="P@ssw0rd"
             value={password}
             name="password"
-            className="outline-none py-2 rounded-md text-gray-700 px-5 text-xl"
+            className="outline-none py-2 rounded-md border text-gray-700 px-5 text-xl"
           />
         </div>
         <button className="py-2 px-5 rounded-md m-3 bg-blue-600 mx-auto w-40 text-white text-xl">
