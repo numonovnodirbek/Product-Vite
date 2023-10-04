@@ -30,9 +30,6 @@ const Header = memo(
             id="category"
           >
             <option className="font-medium" value="all">
-              Category filter
-            </option>
-            <option className="font-medium" value="all">
               All
             </option>
             {CATEGORIES.map((el, id) => {

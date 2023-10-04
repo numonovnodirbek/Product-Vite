@@ -1,12 +1,13 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import { CATEGORIES } from "../data/data";
 
-const Form = memo(({addProduct, Product, handle ,selected}) => {
+const Form = memo(({ addProduct, Product, handle, selected, resetStudent }) => {
   const { productName, price, category, quantity, description } = Product;
+
   return (
     <div className="p-5 border-black border rounded-md text-gray-900 font-medium">
       <h2 className="text-2xl mb-3 font-bold">
-        {selected ? "Product Editing" : "Product Adding"}
+        {selected ? "Product editing" : "Product adding"}
       </h2>
       <form className="flex flex-col gap-2" onSubmit={addProduct}>
         <div className="flex flex-col gap-1">
@@ -73,11 +74,7 @@ const Form = memo(({addProduct, Product, handle ,selected}) => {
           >
             {CATEGORIES.map((el, id) => {
               return (
-                <option
-                  key={id}
-                  className="text-black font-medium"
-                  value={el}
-                >
+                <option key={id} className="text-black font-medium" value={el}>
                   {el}
                 </option>
               );
@@ -101,17 +98,24 @@ const Form = memo(({addProduct, Product, handle ,selected}) => {
           />
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-600 text-white py-1.5 mt-2 rounded-md hover:bg-blue-700 text-xl mx-auto w-40"
-        >
-          {selected ? "Save" : "Add"}
-        </button>
+        <div className="form-buttons w-full flex justify-between">
+          <button
+            type="submit"
+            className="bg-blue-600 text-white py-1.5 mt-2 rounded-md hover:bg-blue-700 text-xl w-40"
+          >
+            {selected ? "Save" : "Add"}
+          </button>
+          <button
+            className="bg-red-600 text-white py-1.5 mt-2 rounded-md hover text-xl w-20"
+            onClick={resetStudent}
+          >
+            Reset
+          </button>
+        </div>
       </form>
     </div>
   );
 });
-
 
 Form.displayName = Form;
 

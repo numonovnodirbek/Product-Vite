@@ -1,1 +1,1 @@
-export const CATEGORIES = ["Drinks", "Dair", "Flours", "Meats", "Fruits", "Sweets"];
+export const CATEGORIES = ["Fruits", "Drinks", "Milks", "Flowers", "Meats", "Sweets", "Bakery"];

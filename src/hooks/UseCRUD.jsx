@@ -10,6 +10,15 @@ const UseCRUD = () => {
     productName: "",
     quantity: "",
   });
+  const resetStudent = useCallback(() => {
+    setProduct({
+      category: CATEGORIES[0],
+      description: "",
+      price: "",
+      productName: "",
+      quantity: "",
+    });
+  }, []);
   const arr = JSON.parse(localStorage.getItem("products")) || [];
   const [Products, setProducts] = useState(arr);
 
@@ -72,7 +81,16 @@ const UseCRUD = () => {
     [Products]
   );
 
-  return {deleteProduct,editProduct,addProduct,handle,selected,Product,Products};
+  return {
+    deleteProduct,
+    editProduct,
+    addProduct,
+    handle,
+    resetStudent,
+    selected,
+    Product,
+    Products,
+  };
 }
 
 export default UseCRUD;
