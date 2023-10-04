@@ -68,10 +68,10 @@ const Form = memo(({ addProduct, Product, handle, selected, resetStudent }) => {
           <select
             value={category}
             onChange={handle}
-            className="ml-1 outline-none text-black rounded-md border border-black py-1 px-4 bg-transparent"
+            className="ml-1 outline-none text-black rounded-md border border-black py-1 px-1 bg-transparent"
             name="category"
             id="category"
-          >
+            >
             {CATEGORIES.map((el, id) => {
               return (
                 <option key={id} className="text-black font-medium" value={el}>
