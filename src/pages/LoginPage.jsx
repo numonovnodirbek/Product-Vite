@@ -8,7 +8,7 @@ const LoginPage = ({setIsAuth}) => {
 
   const checkUser =(e)=>{
     e.preventDefault();
-    if(username==="username" && password==="12345"){
+    if(username==="nodirbek" && password==="P@ssw0rd"){
       navigate("/");
       localStorage.setItem("isauth","1");
       setIsAuth("1");
@@ -23,7 +23,7 @@ const LoginPage = ({setIsAuth}) => {
         onSubmit={checkUser}
         className="loginForm font-serif flex flex-col gap-4  p-10 rounded-lg h-96"
       >
-        <h2 className="text-white text-3xl text-center">Login</h2>
+        <h2 className="text-black text-3xl text-center">Login</h2>
         <div className="flex flex-col gap-2">
           <label htmlFor="username" className="text-xl text-white">
             UserName
